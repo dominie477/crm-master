@@ -1,6 +1,6 @@
 # crm-angular
 
-## Basic Customer System Management System
+## Basic Customer System Management
 
 
 ### Deployed Version
