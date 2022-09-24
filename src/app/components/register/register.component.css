@@ -1,0 +1,12 @@
+.sign-with-google{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:5rem;
+    cursor: pointer;
+    font-size: 200%;
+}
+.bg-themed{
+    background-color: violet;
+}
+

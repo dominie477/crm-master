@@ -1,0 +1,8 @@
+<div class="row text-white container-fluid">
+  
+  <div class="col-12 col-sm-4">
+    <ng-container *ngIf="getLoggedUser().length!=0">
+      <h4 class="display-6">Welcome Back, <small>{{getLoggedUser()}}</small></h4>
+    </ng-container>
+  </div>
+</div>

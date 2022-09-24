@@ -1,0 +1,29 @@
+<div class="container w-50">
+    <form #registerForm="ngForm" (ngSubmit)="submitRegister()" novalidate> 
+        <div class="text-center mb-3 text-light bg-themed p-3 rounded sign-with-google" (click)="loginWithGoogle()" >
+            <p>Sign up with: Google</p>
+          </div>
+
+     
+
+      <!-- Email input -->
+      <div class="form-floating mb-4">
+        <input type="email" id="registerEmail" class="form-control" [(ngModel)]="user.email" email minlength="8" #email="ngModel" required name="registerEmail" placeholder="."/>
+        <label class="form-label" for="registerEmail">Email</label>
+        <small class="text-danger float-start" *ngIf="!email?.valid && (email?.dirty || email?.touched)">Invalid Email Address</small>
+      </div>
+
+      <!-- Password input -->
+      <div class="form-floating mb-4">
+        <input type="password" id="registerPassword" class="form-control" [(ngModel)]="user.password" #password="ngModel" required name="RegisterPassword" placeholder="." minlength="6"/>
+        <label class="form-label" for="registerPassword">Password</label>
+        <small class="text-danger float-start" *ngIf="!password?.valid && (password?.dirty || password?.touched)">Password must bt at least 6 characters long and include at least One Letter and One Number</small>
+      </div>
+
+     
+      
+      <div class="w-100 d-flex justify-content-center">
+        <button type="submit" class="btn bg-themed mb-4 text-light" [disabled]="registerForm.invalid">Sign Up</button>
+    </div>  
+    </form>
+</div>

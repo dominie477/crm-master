@@ -1,0 +1,29 @@
+<div class="container w-50">
+    <div class="tab-content">
+        <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab-login">
+          <form #loginForm="ngForm" (ngSubmit)="submitLogin()">
+            <div class="text-center mb-3 text-light bg-themed p-3 rounded sign-with-google" (click)="loginWithGoogle()" >
+              <p>Sign in with: Google</p>
+            </div>
+      
+           
+
+            <div class="form-floating mb-4">
+              <input type="email" id="loginEmail" class="form-control" [(ngModel)]="user.email" email minlength="8" #email="ngModel" required name="loginEmail" placeholder="."/>
+              <label class="form-label" for="loginEmail">Email</label>
+              <small class="text-danger float-start" *ngIf="!email?.valid && (email?.dirty || email?.touched)">Invalid Email Address</small>
+            </div>
+      
+            <div class="form-floating mb-4">
+              <input type="password" id="loginPassword" class="form-control" [(ngModel)]="user.password" #password="ngModel" required name="loginPassword" placeholder="." minlength="6"/>
+              <label class="form-label" for="loginPassword">Password</label>
+              <small class="text-danger float-start" *ngIf="!password?.valid && (password?.dirty || password?.touched)">Password must bt at least 6 characters long</small>
+            </div>
+      
+      
+            <div class="w-100 d-flex justify-content-center">
+                <button type="submit" class="btn bg-themed btn-block mb-4 text-light" [disabled]="loginForm.invalid">Sign In</button>
+            </div>      
+          </form>
+        </div>
+</div>

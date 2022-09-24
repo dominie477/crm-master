@@ -1,0 +1,47 @@
+.fa-eye:hover{
+    color: #0D6EFD;
+    cursor: pointer;
+}
+.fa-pencil:hover{
+    color: #FFC107;
+    cursor: pointer;
+}
+.fa-trash:hover{
+    color: #DC3545;
+    cursor: pointer;
+}
+#searchContactsContainer{
+    height: calc(60vmin - 8px);
+    /* position: relative; */
+    overflow-y: scroll;
+}
+#mobileTable{
+    display: none;
+    visibility: hidden;
+}
+#desktopTable{
+    /* display: block; */
+    visibility: visible;
+}
+
+
+
+
+@media only screen and (max-width: 989px){
+    #searchContactsContainer{
+    height: auto;
+    overflow: visible;
+    }
+   
+    #desktopTable{
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.component-container{
+    margin-left: 350px;
+    margin-bottom: 400px;
+    width: 500%;
+}
+
